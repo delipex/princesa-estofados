@@ -1,32 +1,11 @@
-:root {
-    --black: #0a0a0a;
-    --red: #e60026;
-    --gray: #888;
-    --light-gray: #f4f4f4;
-    --sora: 'Sora', sans-serif;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-height: 1.6; }
-
-/* Header Minimalista */
-header { padding: 20px 0; background: var(--black); color: #fff; }
-.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-.logo { font-family: var(--sora); font-weight: 800; letter-spacing: -1px; }
-.logo span { color: var(--red); display: block; font-size: 10px; letter-spacing: 2px; }
-
-/* Hero com Efeito de Fundo */
-.hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('seu-background.jpg'); background-size: cover; display: flex; align-items: center; color: white; }
-.hero h1 { font-family: var(--sora); font-size: 3.5rem; }
-.hero h1 span { color: var(--red); }
-
-/* Cartões com Efeito Hover */
-.card { padding: 40px; background: var(--light-gray); transition: 0.4s; border-bottom: 4px solid transparent; }
-.card:hover { transform: translateY(-10px); border-bottom-color: var(--red); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-/* Botões */
-.btn-hero { background: var(--red); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; transition: 0.3s; }
-.btn-hero:hover { background: #b3001e; letter-spacing: 1px; }
-
+:root { --black: #0a0a0a; --red: #e60026; --white: #ffffff; }
+body { font-family: 'Inter', sans-serif; margin: 0; }
 .container { max-width: 1100px; margin: auto; padding: 0 20px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+header { background: var(--black); padding: 20px 0; color: var(--white); }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Sora', sans-serif; font-weight: 800; }
+.logo span { color: var(--red); display: block; font-size: 10px; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: var(--white); text-decoration: none; }
+.hero { height: 60vh; background: #333; display: flex; align-items: center; color: white; }
+.btn-hero { background: var(--red); color: white; padding: 15px 30px; text-decoration: none; display: inline-block; }
