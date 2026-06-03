@@ -1,11 +1,58 @@
-:root { --black: #0a0a0a; --red: #e60026; --white: #ffffff; }
-body { font-family: 'Inter', sans-serif; margin: 0; }
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
-header { background: var(--black); padding: 20px 0; color: var(--white); }
-nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: 'Sora', sans-serif; font-weight: 800; }
-.logo span { color: var(--red); display: block; font-size: 10px; }
-.nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { color: var(--white); text-decoration: none; }
-.hero { height: 60vh; background: #333; display: flex; align-items: center; color: white; }
-.btn-hero { background: var(--red); color: white; padding: 15px 30px; text-decoration: none; display: inline-block; }
+
+:root{
+--primary:#111;
+--accent:#d9a441;
+--light:#f7f7f7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#fff;color:#222}
+.container{width:min(1200px,90%);margin:auto}
+.header{
+position:fixed;width:100%;top:0;z-index:99;
+backdrop-filter:blur(14px);
+background:rgba(0,0,0,.65)
+}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-size:2rem;font-weight:800;color:#fff;text-transform:lowercase}
+.logo span{display:block;font-size:.7rem;letter-spacing:4px;color:var(--accent)}
+nav a{color:#fff;text-decoration:none;margin-left:24px}
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600') center/cover;
+position:relative;
+display:flex;align-items:center;
+}
+.overlay{
+position:absolute;inset:0;
+background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.35));
+}
+.hero-content{position:relative;color:#fff}
+.tag{color:var(--accent);font-weight:700}
+.hero h1{font-size:clamp(3rem,7vw,6rem);max-width:700px;margin:20px 0}
+.hero p{font-size:1.2rem;max-width:600px;margin-bottom:30px}
+.btn{
+display:inline-block;padding:18px 36px;
+background:var(--accent);color:#111;text-decoration:none;
+font-weight:700;border-radius:60px;
+transition:.3s
+}
+.btn:hover{transform:translateY(-4px)}
+.services{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;padding:100px 0;
+}
+.card{
+padding:35px;border-radius:20px;background:#fff;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+transition:.3s
+}
+.card:hover{transform:translateY(-8px)}
+.gallery{padding:80px 5%;background:var(--light)}
+.gallery h2{text-align:center;font-size:2.5rem;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid div{
+height:320px;border-radius:20px;
+background:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200') center/cover;
+transition:.4s
+}
+.grid div:hover{transform:scale(1.03)}
